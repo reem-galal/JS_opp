@@ -1,0 +1,332 @@
+
+/* General Settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4f6fa;
+    color: #253047;
+}
+
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+/* Sidebar */
+.sidebar {
+    width: 245px;
+    background: #17243b;
+    color: white;
+    padding: 30px 20px;
+}
+
+.logo {
+    font-size: 21px;
+    font-weight: bold;
+    margin-bottom: 45px;
+}
+
+.logo span {
+    color: #52a6ff;
+}
+
+.menu-title {
+    color: #8996aa;
+    font-size: 12px;
+    margin-bottom: 18px;
+}
+
+.menu-item {
+    padding: 14px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    color: #d5ddeb;
+    font-size: 14px;
+}
+
+.menu-item.active {
+    background: #28466d;
+    color: white;
+}
+
+.sidebar-footer {
+    margin-top: 70px;
+    font-size: 12px;
+    color: #8996aa;
+    line-height: 1.8;
+}
+
+
+/* Main Content */
+.main {
+    flex: 1;
+    padding: 35px;
+    min-width: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 35px;
+    flex-wrap: wrap;
+}
+
+.header h1 {
+    font-size: 25px;
+    margin-bottom: 9px;
+}
+
+.header p {
+    color: #8791a3;
+    font-size: 14px;
+}
+
+.status {
+    background: #e4f7ed;
+    color: #218653;
+    padding: 10px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+
+/* Statistics Cards */
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    background: white;
+    padding: 22px;
+    border-radius: 12px;
+    border: 1px solid #e9edf3;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.025);
+}
+
+.stat-card p {
+    color: #8490a3;
+    font-size: 13px;
+    margin-bottom: 16px;
+}
+
+.stat-card h2 {
+    font-size: 30px;
+    color: #253b5b;
+}
+
+.stat-icon {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+
+/* Sections */
+.section {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #e9edf3;
+    margin-bottom: 25px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 23px;
+    flex-wrap: wrap;
+}
+
+.section-header h2 {
+    font-size: 18px;
+}
+
+.section-header span {
+    color: #8994a6;
+    font-size: 12px;
+}
+
+
+/* Tables */
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 650px;
+}
+
+th {
+    background: #f5f7fb;
+    color: #718096;
+    font-size: 13px;
+    font-weight: normal;
+    padding: 15px;
+    text-align: right;
+}
+
+td {
+    padding: 17px 15px;
+    border-bottom: 1px solid #edf0f5;
+    font-size: 13px;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+.student-name {
+    font-weight: bold;
+    color: #293b56;
+}
+
+.badge {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+}
+
+.success {
+    background: #e5f7ed;
+    color: #218653;
+}
+
+.warning {
+    background: #fff3df;
+    color: #bd7a19;
+}
+
+.grade {
+    color: #315f9b;
+    font-weight: bold;
+}
+
+
+/* Grace Committee */
+.grace-section {
+    border-top: 4px solid #4b8ce5;
+}
+
+.grace-info {
+    background: #f1f6ff;
+    padding: 17px;
+    border-radius: 9px;
+    margin-bottom: 20px;
+    color: #45658e;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.average-box {
+    background: #172d4c;
+    color: white;
+    padding: 23px;
+    border-radius: 10px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.average-box p {
+    color: #bdcce0;
+    font-size: 13px;
+    margin-bottom: 9px;
+}
+
+.average-box h2 {
+    font-size: 28px;
+}
+
+.average-box span {
+    font-size: 30px;
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    color: #9aa4b3;
+    font-size: 12px;
+    padding: 15px;
+}
+
+
+/* Responsive Design */
+@media (max-width: 1000px) {
+
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 650px) {
+
+    .layout {
+        display: block;
+    }
+
+    .sidebar {
+        width: 100%;
+        padding: 18px;
+    }
+
+    .logo {
+        margin-bottom: 15px;
+    }
+
+    .menu-title,
+    .sidebar-footer {
+        display: none;
+    }
+
+    .menu-item {
+        display: inline-block;
+        margin: 5px 0;
+        padding: 9px;
+        font-size: 12px;
+    }
+
+    .main {
+        padding: 20px 14px;
+    }
+
+    .header h1 {
+        font-size: 21px;
+    }
+
+    .stats {
+        gap: 10px;
+    }
+
+    .stat-card {
+        padding: 15px;
+    }
+
+    .stat-card h2 {
+        font-size: 25px;
+    }
+
+    .section {
+        padding: 16px;
+    }
+
+}
