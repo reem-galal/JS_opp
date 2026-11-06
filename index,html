@@ -1,0 +1,179 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>UNICORE | Student Management System</title>
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="layout">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <div class="logo">
+                UNI<span>CORE</span>
+            </div>
+
+            <p class="menu-title">MAIN MENU</p>
+
+            <div class="menu-item active">▦ Dashboard</div>
+            <div class="menu-item">▤ Students</div>
+            <div class="menu-item">▥ Academic Reports</div>
+            <div class="menu-item">✧ Grace Committee</div>
+
+            <div class="sidebar-footer">
+                Student Management System<br>
+                Academic Year 2026
+            </div>
+
+        </aside>
+
+
+        <!-- Main Content -->
+        <main class="main">
+
+            <header class="header">
+
+                <div>
+                    <h1>لوحة التحكم الأكاديمية</h1>
+                    <p>إدارة وتحليل نتائج الطلاب ومتابعة الأداء الأكاديمي</p>
+                </div>
+
+                <div class="status">
+                    ● System Active
+                </div>
+
+            </header>
+
+
+            <!-- Statistics -->
+            <section class="stats">
+
+                <div class="stat-card">
+                    <div class="stat-icon">👨‍🎓</div>
+                    <p>إجمالي الطلاب</p>
+                    <h2 id="totalStudents">0</h2>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">✓</div>
+                    <p>الطلاب الناجحون</p>
+                    <h2 id="passedStudents">0</h2>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">⚠</div>
+                    <p>يحتاجون مراجعة</p>
+                    <h2 id="reviewStudents">0</h2>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">✧</div>
+                    <p>طلاب لجنة الرأفة</p>
+                    <h2 id="graceStudentsCount">0</h2>
+                </div>
+
+            </section>
+
+
+            <!-- Students Report -->
+            <section class="section">
+
+                <div class="section-header">
+                    <h2>تقرير الطلاب</h2>
+                    <span>Academic Performance</span>
+                </div>
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+                            <tr>
+                                <th>رقم الجلوس</th>
+                                <th>اسم الطالب</th>
+                                <th>المتوسط</th>
+                                <th>التقدير</th>
+                                <th>الحضور</th>
+                                <th>النتيجة</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="studentsTable"></tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+
+            <!-- Grace Committee -->
+            <section class="section grace-section">
+
+                <div class="section-header">
+                    <h2>لجنة الرأفة</h2>
+                    <span>Grace Committee Analysis</span>
+                </div>
+
+                <div class="grace-info">
+                    يتم استخراج الطلاب الذين تتراوح متوسطاتهم بين
+                    40 و49، ثم إضافة 5 درجات رأفة إلى متوسطاتهم
+                    لأغراض التحليل.
+                </div>
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+                            <tr>
+                                <th>رقم الجلوس</th>
+                                <th>اسم الطالب</th>
+                                <th>المتوسط الأصلي</th>
+                                <th>بعد إضافة الرأفة</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="graceTable"></tbody>
+
+                    </table>
+
+                </div>
+
+                <div class="average-box">
+
+                    <div>
+                        <p>متوسط درجات المتعثرين بعد الرأفة</p>
+                        <h2 id="graceAverage">0.00</h2>
+                    </div>
+
+                    <span>📊</span>
+
+                </div>
+
+            </section>
+
+
+            <footer>
+                © 2026 UNICORE | Student Management System
+            </footer>
+
+        </main>
+
+    </div>
+
+    <!-- JavaScript File -->
+    <script src="script.js"></script>
+
+</body>
+</html>
